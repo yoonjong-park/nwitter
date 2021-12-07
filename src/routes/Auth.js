@@ -48,12 +48,12 @@ const Auth = () => {
       if (name === "google") {
         provider = new GoogleAuthProvider();
         const result = await signInWithPopup(auth, provider);
-        const credential = GoogleAuthProvider.credentialFromResult(result);
+        GoogleAuthProvider.credentialFromResult(result);
         console.log("provider", provider);
       } else if (name === "github") {
         provider = new GithubAuthProvider();
         const result = await signInWithPopup(auth, provider);
-        const credential = GithubAuthProvider.credentialFromResult(result);
+        GithubAuthProvider.credentialFromResult(result);
         console.log("provider", provider);
       }
     } catch (error) {
